@@ -352,21 +352,6 @@
     <resources>
         <image name="StethoBleu256.png" width="256" height="256"/>
     </resources>
-    <classes>
-        <class className="HGAppLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HGAppLoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="fbLogIn:"/>
-                <relationship kind="action" name="performLogIn:"/>
-            </relationships>
-        </class>
-        <class className="HGAppViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HGAppViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
