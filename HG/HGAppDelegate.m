@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 com.hg. All rights reserved.
 //
 
-#import "HGAppAppDelegate.h"
+#import "HGAppDelegate.h"
 
-@implementation HGAppAppDelegate
+@implementation HGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -18,6 +18,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSTimer *myTimer = [NSTimer timerWithTimeInterval:3.0
+                                               target:self
+                                             selector:@selector(timerFiredMethod:)
+                                             userInfo:nil
+                                              repeats: NO];
+    
+    [[NSRunLoop mainRunLoop] addTimer: myTimer
+                              forMode: NSDefaultRunLoopMode];
+
+}
+
+- (void)timerFiredMethod:(NSTimer *)timer
+{
+    // Whatever the segue is called to your second view controller. Don't forget to set it in your storyboard ;)
+    [self performSegueWithIdentifier:@"seguetologinview" sender:self];
 }
 
 - (void)didReceiveMemoryWarning

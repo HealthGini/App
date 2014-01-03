@@ -12,12 +12,15 @@
 		A2857291184F3A8300CA2D31 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2857290184F3A8300CA2D31 /* CoreGraphics.framework */; };
 		A2857297184F3A8300CA2D31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A2857295184F3A8300CA2D31 /* InfoPlist.strings */; };
 		A2857299184F3A8300CA2D31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2857298184F3A8300CA2D31 /* main.m */; };
-		A285729D184F3A8300CA2D31 /* HGAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A285729C184F3A8300CA2D31 /* HGAppAppDelegate.m */; };
+		A285729D184F3A8300CA2D31 /* HGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A285729C184F3A8300CA2D31 /* HGAppDelegate.m */; };
 		A285729F184F3A8300CA2D31 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A285729E184F3A8300CA2D31 /* Default.png */; };
 		A28572A1184F3A8300CA2D31 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A28572A0184F3A8300CA2D31 /* Default@2x.png */; };
 		A28572A3184F3A8300CA2D31 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A28572A2184F3A8300CA2D31 /* Default-568h@2x.png */; };
 		A28572A6184F3A8300CA2D31 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28572A4184F3A8300CA2D31 /* MainStoryboard.storyboard */; };
 		A28572A9184F3A8300CA2D31 /* HGAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28572A8184F3A8300CA2D31 /* HGAppViewController.m */; };
+		A28572B018508FBE00CA2D31 /* StethoBleu256.png in Resources */ = {isa = PBXBuildFile; fileRef = A28572AF18508FBE00CA2D31 /* StethoBleu256.png */; };
+		A28573351866C8CC00CA2D31 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28573341866C8CB00CA2D31 /* FacebookSDK.framework */; };
+		A285733E1866D95300CA2D31 /* HGAppLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A285733D1866D95300CA2D31 /* HGAppLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,14 +32,18 @@
 		A2857296184F3A8300CA2D31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A2857298184F3A8300CA2D31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A285729A184F3A8300CA2D31 /* HG-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HG-Prefix.pch"; sourceTree = "<group>"; };
-		A285729B184F3A8300CA2D31 /* HGAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGAppAppDelegate.h; sourceTree = "<group>"; };
-		A285729C184F3A8300CA2D31 /* HGAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGAppAppDelegate.m; sourceTree = "<group>"; };
+		A285729B184F3A8300CA2D31 /* HGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGAppDelegate.h; sourceTree = "<group>"; };
+		A285729C184F3A8300CA2D31 /* HGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGAppDelegate.m; sourceTree = "<group>"; };
 		A285729E184F3A8300CA2D31 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A28572A0184F3A8300CA2D31 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A28572A2184F3A8300CA2D31 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A28572A5184F3A8300CA2D31 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A28572A7184F3A8300CA2D31 /* HGAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGAppViewController.h; sourceTree = "<group>"; };
 		A28572A8184F3A8300CA2D31 /* HGAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGAppViewController.m; sourceTree = "<group>"; };
+		A28572AF18508FBE00CA2D31 /* StethoBleu256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StethoBleu256.png; sourceTree = "<group>"; };
+		A28573341866C8CB00CA2D31 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		A285733C1866D95200CA2D31 /* HGAppLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGAppLoginViewController.h; sourceTree = "<group>"; };
+		A285733D1866D95300CA2D31 /* HGAppLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGAppLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 				A285728D184F3A8300CA2D31 /* UIKit.framework in Frameworks */,
 				A285728F184F3A8300CA2D31 /* Foundation.framework in Frameworks */,
 				A2857291184F3A8300CA2D31 /* CoreGraphics.framework in Frameworks */,
+				A28573351866C8CC00CA2D31 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +81,7 @@
 		A285728B184F3A8300CA2D31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A28573341866C8CB00CA2D31 /* FacebookSDK.framework */,
 				A285728C184F3A8300CA2D31 /* UIKit.framework */,
 				A285728E184F3A8300CA2D31 /* Foundation.framework */,
 				A2857290184F3A8300CA2D31 /* CoreGraphics.framework */,
@@ -83,12 +92,14 @@
 		A2857292184F3A8300CA2D31 /* HG */ = {
 			isa = PBXGroup;
 			children = (
-				A285729B184F3A8300CA2D31 /* HGAppAppDelegate.h */,
-				A285729C184F3A8300CA2D31 /* HGAppAppDelegate.m */,
+				A285729B184F3A8300CA2D31 /* HGAppDelegate.h */,
+				A285729C184F3A8300CA2D31 /* HGAppDelegate.m */,
 				A28572A4184F3A8300CA2D31 /* MainStoryboard.storyboard */,
 				A28572A7184F3A8300CA2D31 /* HGAppViewController.h */,
 				A28572A8184F3A8300CA2D31 /* HGAppViewController.m */,
 				A2857293184F3A8300CA2D31 /* Supporting Files */,
+				A285733C1866D95200CA2D31 /* HGAppLoginViewController.h */,
+				A285733D1866D95300CA2D31 /* HGAppLoginViewController.m */,
 			);
 			path = HG;
 			sourceTree = "<group>";
@@ -96,6 +107,7 @@
 		A2857293184F3A8300CA2D31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A28572AF18508FBE00CA2D31 /* StethoBleu256.png */,
 				A2857294184F3A8300CA2D31 /* HG-Info.plist */,
 				A2857295184F3A8300CA2D31 /* InfoPlist.strings */,
 				A2857298184F3A8300CA2D31 /* main.m */,
@@ -164,6 +176,7 @@
 				A28572A1184F3A8300CA2D31 /* Default@2x.png in Resources */,
 				A28572A3184F3A8300CA2D31 /* Default-568h@2x.png in Resources */,
 				A28572A6184F3A8300CA2D31 /* MainStoryboard.storyboard in Resources */,
+				A28572B018508FBE00CA2D31 /* StethoBleu256.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,8 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2857299184F3A8300CA2D31 /* main.m in Sources */,
-				A285729D184F3A8300CA2D31 /* HGAppAppDelegate.m in Sources */,
+				A285729D184F3A8300CA2D31 /* HGAppDelegate.m in Sources */,
 				A28572A9184F3A8300CA2D31 /* HGAppViewController.m in Sources */,
+				A285733E1866D95300CA2D31 /* HGAppLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +275,10 @@
 		A28572AD184F3A8300CA2D31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Documents/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HG/HG-Prefix.pch";
 				INFOPLIST_FILE = "HG/HG-Info.plist";
@@ -272,6 +290,10 @@
 		A28572AE184F3A8300CA2D31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Documents/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HG/HG-Prefix.pch";
 				INFOPLIST_FILE = "HG/HG-Info.plist";
