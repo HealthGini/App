@@ -50,13 +50,16 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="acT-Ev-2NW" kind="push" identifier="seguetosugarview" id="aGG-ta-6W3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Others" id="50A-82-E4M">
+                            <tableViewSection headerTitle="Cholesterol" footerTitle="Add new record" id="50A-82-E4M">
                                 <cells>
-                                    <tableViewCell hidden="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="NVe-Xz-BB6" detailTextLabel="fSK-ov-kqn" style="IBUITableViewCellStyleValue1" id="YKb-hF-SdE">
-                                        <rect key="frame" x="0.0" y="169" width="320" height="45"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="NVe-Xz-BB6" detailTextLabel="fSK-ov-kqn" style="IBUITableViewCellStyleValue1" id="YKb-hF-SdE">
+                                        <rect key="frame" x="0.0" y="169" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="267" height="43"/>
@@ -76,21 +79,30 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Fxt-ff-6wR">
-                                        <rect key="frame" x="0.0" y="214" width="320" height="44"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Blood Pressure" footerTitle="Add new record" id="YL2-CF-piA">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="nq2-lZ-PMq" detailTextLabel="qvT-4i-JEJ" style="IBUITableViewCellStyleValue1" id="GyO-jh-kqe">
+                                        <rect key="frame" x="0.0" y="292" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="267" height="43"/>
+                                            <rect key="frame" x="10" y="1" width="267" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="P9J-Qp-YLY">
-                                        <rect key="frame" x="0.0" y="258" width="320" height="45"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="267" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Cholesterol" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nq2-lZ-PMq">
+                                                    <rect key="frame" x="10" y="11" width="94" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Add" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qvT-4i-JEJ">
+                                                    <rect key="frame" x="226" y="11" width="31" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
@@ -110,6 +122,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKc-Vq-XUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1034" y="-172"/>
+        </scene>
+        <!--Sugar View Controller-->
+        <scene sceneID="UCd-et-IJW">
+            <objects>
+                <viewController storyboardIdentifier="hgsugarview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="acT-Ev-2NW" customClass="HGSugarViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B9n-yu-JeO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRh-md-T9h">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="216" id="8zE-Qk-XCT"/>
+                                    <constraint firstAttribute="height" constant="216" id="f5r-10-RIg"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RRh-md-T9h" firstAttribute="top" secondItem="B9n-yu-JeO" secondAttribute="top" constant="20" symbolic="YES" type="default" id="I8d-zn-W4c"/>
+                            <constraint firstItem="RRh-md-T9h" firstAttribute="centerX" secondItem="B9n-yu-JeO" secondAttribute="centerX" type="default" id="tPh-hy-fKr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aSD-z5-gdL">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="B6t-IP-h44"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="picker" destination="RRh-md-T9h" id="K4s-cU-sA3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NIV-01-KxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564" y="-172"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="y8T-0g-MzX">
@@ -216,6 +260,7 @@
                     </view>
                     <connections>
                         <segue destination="n4T-SY-xmg" kind="modal" identifier="seguetologinview" id="WmL-IO-Ss7"/>
+                        <segue destination="Gso-DN-SYT" kind="modal" identifier="seguetest" id="UPK-Fw-DaE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dX3-JE-tKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -308,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cc-Pj-Ol3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-96" y="440"/>
+            <point key="canvasLocation" x="-82" y="610"/>
         </scene>
         <!--Navigation Controller - GiniSocial-->
         <scene sceneID="FTJ-5U-KHR">
@@ -352,9 +397,32 @@
     <resources>
         <image name="StethoBleu256.png" width="256" height="256"/>
     </resources>
+    <classes>
+        <class className="HGAppLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HGAppLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="fbLogIn:"/>
+            </relationships>
+        </class>
+        <class className="HGAppViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HGAppViewController.h"/>
+        </class>
+        <class className="HGSugarViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HGSugarViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="UPK-Fw-DaE"/>
+    </inferredMetricsTieBreakers>
 </document>

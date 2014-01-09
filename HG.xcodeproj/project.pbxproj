@@ -21,6 +21,7 @@
 		A28572B018508FBE00CA2D31 /* StethoBleu256.png in Resources */ = {isa = PBXBuildFile; fileRef = A28572AF18508FBE00CA2D31 /* StethoBleu256.png */; };
 		A28573351866C8CC00CA2D31 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28573341866C8CB00CA2D31 /* FacebookSDK.framework */; };
 		A285733E1866D95300CA2D31 /* HGAppLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A285733D1866D95300CA2D31 /* HGAppLoginViewController.m */; };
+		A289D507187C023F00EB46A0 /* HGSugarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A289D506187C023F00EB46A0 /* HGSugarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		A28573341866C8CB00CA2D31 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		A285733C1866D95200CA2D31 /* HGAppLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGAppLoginViewController.h; sourceTree = "<group>"; };
 		A285733D1866D95300CA2D31 /* HGAppLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGAppLoginViewController.m; sourceTree = "<group>"; };
+		A289D505187C023F00EB46A0 /* HGSugarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGSugarViewController.h; sourceTree = "<group>"; };
+		A289D506187C023F00EB46A0 /* HGSugarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGSugarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				A2857293184F3A8300CA2D31 /* Supporting Files */,
 				A285733C1866D95200CA2D31 /* HGAppLoginViewController.h */,
 				A285733D1866D95300CA2D31 /* HGAppLoginViewController.m */,
+				A289D505187C023F00EB46A0 /* HGSugarViewController.h */,
+				A289D506187C023F00EB46A0 /* HGSugarViewController.m */,
 			);
 			path = HG;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 				A285729D184F3A8300CA2D31 /* HGAppDelegate.m in Sources */,
 				A28572A9184F3A8300CA2D31 /* HGAppViewController.m in Sources */,
 				A285733E1866D95300CA2D31 /* HGAppLoginViewController.m in Sources */,
+				A289D507187C023F00EB46A0 /* HGSugarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +327,7 @@
 				A28572AE184F3A8300CA2D31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

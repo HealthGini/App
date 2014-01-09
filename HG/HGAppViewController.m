@@ -32,7 +32,9 @@
 - (void)timerFiredMethod:(NSTimer *)timer
 {
     // Whatever the segue is called to your second view controller. Don't forget to set it in your storyboard ;)
-    [self performSegueWithIdentifier:@"seguetologinview" sender:self];
+    //[self performSegueWithIdentifier:@"seguetologinview" sender:self];
+    [self performSegueWithIdentifier:@"seguetest" sender:self];
+
 }
 
 - (void)didReceiveMemoryWarning
