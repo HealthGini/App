@@ -25,6 +25,8 @@
 		A289D55C1881D93D00EB46A0 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A289D55B1881D93D00EB46A0 /* libCorePlot-CocoaTouch.a */; };
 		A289D55E1882295000EB46A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289D55D1882295000EB46A0 /* QuartzCore.framework */; };
 		A289D5611882792D00EB46A0 /* HGMyplusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A289D5601882792D00EB46A0 /* HGMyplusViewController.m */; };
+		A289D56718827ED200EB46A0 /* CPDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A289D56418827ED200EB46A0 /* CPDConstants.m */; };
+		A289D56818827ED200EB46A0 /* CPDStockPriceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A289D56618827ED200EB46A0 /* CPDStockPriceStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +134,10 @@
 		A289D55D1882295000EB46A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A289D55F1882792D00EB46A0 /* HGMyplusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMyplusViewController.h; sourceTree = "<group>"; };
 		A289D5601882792D00EB46A0 /* HGMyplusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMyplusViewController.m; sourceTree = "<group>"; };
+		A289D56318827ED200EB46A0 /* CPDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDConstants.h; sourceTree = "<group>"; };
+		A289D56418827ED200EB46A0 /* CPDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDConstants.m; sourceTree = "<group>"; };
+		A289D56518827ED200EB46A0 /* CPDStockPriceStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDStockPriceStore.h; sourceTree = "<group>"; };
+		A289D56618827ED200EB46A0 /* CPDStockPriceStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDStockPriceStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +319,10 @@
 		A289D56218827DD100EB46A0 /* Starter Files */ = {
 			isa = PBXGroup;
 			children = (
+				A289D56318827ED200EB46A0 /* CPDConstants.h */,
+				A289D56418827ED200EB46A0 /* CPDConstants.m */,
+				A289D56518827ED200EB46A0 /* CPDStockPriceStore.h */,
+				A289D56618827ED200EB46A0 /* CPDStockPriceStore.m */,
 			);
 			name = "Starter Files";
 			sourceTree = "<group>";
@@ -391,6 +401,8 @@
 				A285733E1866D95300CA2D31 /* HGAppLoginViewController.m in Sources */,
 				A289D507187C023F00EB46A0 /* HGSugarViewController.m in Sources */,
 				A289D5611882792D00EB46A0 /* HGMyplusViewController.m in Sources */,
+				A289D56718827ED200EB46A0 /* CPDConstants.m in Sources */,
+				A289D56818827ED200EB46A0 /* CPDStockPriceStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
