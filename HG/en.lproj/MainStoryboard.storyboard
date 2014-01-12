@@ -19,6 +19,21 @@
             </objects>
             <point key="canvasLocation" x="964" y="587"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Mxu-48-eqI">
+            <objects>
+                <viewController id="A0J-Gj-HLZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ehw-a4-lMN">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CQO-U4-Nvm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YCS-U1-jvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513" y="514"/>
+        </scene>
         <!--Table View Controller - My PHR-->
         <scene sceneID="SdA-Do-0ye">
             <objects>
@@ -27,22 +42,34 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <segmentedControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" segmentControlStyle="bar" id="1DY-E2-Lak">
+                            <rect key="frame" x="0.0" y="291" width="320" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Share"/>
+                                <segment title="MyPlus"/>
+                                <segment title="Notifications"/>
+                            </segments>
+                            <connections>
+                                <segue destination="A0J-Gj-HLZ" kind="push" identifier="seguetomyplus" id="Cmg-6r-H2b"/>
+                            </connections>
+                        </segmentedControl>
                         <sections>
-                            <tableViewSection headerTitle="Sugar" footerTitle="Add new record" id="KQL-Da-tpC">
+                            <tableViewSection footerTitle="Add new record" id="KQL-Da-tpC">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="TQg-K7-uWG" detailTextLabel="Wre-es-com" style="IBUITableViewCellStyleValue1" id="fQC-1R-dUw">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="10" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="267" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQg-K7-uWG">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Sugar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQg-K7-uWG">
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wre-es-com">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Add" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wre-es-com">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,10 +83,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Cholesterol" footerTitle="Add new record" id="50A-82-E4M">
+                            <tableViewSection footerTitle="Add new record" id="50A-82-E4M">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="NVe-Xz-BB6" detailTextLabel="fSK-ov-kqn" style="IBUITableViewCellStyleValue1" id="YKb-hF-SdE">
-                                        <rect key="frame" x="0.0" y="169" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="107" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="267" height="43"/>
@@ -81,17 +108,17 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Blood Pressure" footerTitle="Add new record" id="YL2-CF-piA">
+                            <tableViewSection footerTitle="Add new record" id="YL2-CF-piA">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="nq2-lZ-PMq" detailTextLabel="qvT-4i-JEJ" style="IBUITableViewCellStyleValue1" id="GyO-jh-kqe">
-                                        <rect key="frame" x="0.0" y="292" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="204" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="267" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Cholesterol" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nq2-lZ-PMq">
-                                                    <rect key="frame" x="10" y="11" width="94" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="BP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nq2-lZ-PMq">
+                                                    <rect key="frame" x="10" y="11" width="24" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -137,11 +164,30 @@
                                     <constraint firstAttribute="height" constant="216" id="f5r-10-RIg"/>
                                 </constraints>
                             </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="mg/dL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="025-Y5-FTT">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ij8-yQ-uub">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="BNH-f1-zwc"/>
+                                    <constraint firstAttribute="width" constant="228" id="jOn-Fw-d7F"/>
+                                </constraints>
+                                <mutableString key="text">Notes: Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RRh-md-T9h" firstAttribute="top" secondItem="B9n-yu-JeO" secondAttribute="top" constant="20" symbolic="YES" type="default" id="I8d-zn-W4c"/>
-                            <constraint firstItem="RRh-md-T9h" firstAttribute="centerX" secondItem="B9n-yu-JeO" secondAttribute="centerX" type="default" id="tPh-hy-fKr"/>
+                            <constraint firstItem="025-Y5-FTT" firstAttribute="leading" secondItem="B9n-yu-JeO" secondAttribute="leading" constant="109" id="263-am-wvZ"/>
+                            <constraint firstAttribute="bottom" secondItem="025-Y5-FTT" secondAttribute="bottom" constant="162" id="76v-Zi-gH3"/>
+                            <constraint firstItem="ij8-yQ-uub" firstAttribute="top" secondItem="B9n-yu-JeO" secondAttribute="top" constant="6" id="BYC-G2-K2d"/>
+                            <constraint firstItem="RRh-md-T9h" firstAttribute="centerX" secondItem="B9n-yu-JeO" secondAttribute="centerX" type="default" id="Rrd-dl-XEd"/>
+                            <constraint firstItem="RRh-md-T9h" firstAttribute="top" secondItem="B9n-yu-JeO" secondAttribute="top" constant="142" id="bih-cZ-ErW"/>
+                            <constraint firstItem="RRh-md-T9h" firstAttribute="trailing" secondItem="ij8-yQ-uub" secondAttribute="trailing" type="default" id="h0M-yH-CZn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aSD-z5-gdL">
@@ -153,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIV-01-KxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564" y="-172"/>
+            <point key="canvasLocation" x="1572" y="-172"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="y8T-0g-MzX">
@@ -397,26 +443,6 @@
     <resources>
         <image name="StethoBleu256.png" width="256" height="256"/>
     </resources>
-    <classes>
-        <class className="HGAppLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HGAppLoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="fbLogIn:"/>
-            </relationships>
-        </class>
-        <class className="HGAppViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HGAppViewController.h"/>
-        </class>
-        <class className="HGSugarViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HGSugarViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="picker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
