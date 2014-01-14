@@ -63,7 +63,9 @@
 	[graph applyTheme:[CPTTheme themeNamed:kCPTDarkGradientTheme]];
 	self.hostView.hostedGraph = graph;
 	// 2 - Set graph title
-	NSString *title = @"Portfolio Prices: April 2012";
+	//NSString *title = @"Portfolio Prices: April 2012";
+    NSString *title = @"Readings";
+
 	graph.title = title;
 	// 3 - Create and set text style
 	CPTMutableTextStyle *titleStyle = [CPTMutableTextStyle textStyle];
@@ -195,7 +197,8 @@
 	x.majorTickLocations = xLocations;
 	// 4 - Configure y-axis
 	CPTAxis *y = axisSet.yAxis;
-	y.title = @"Price";
+	//y.title = @"Price";
+    y.title = @"mg/dL";
 	y.titleTextStyle = axisTitleStyle;
 	y.titleOffset = -40.0f;
 	y.axisLineStyle = axisLineStyle;
