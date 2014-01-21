@@ -14,6 +14,7 @@
 
 @implementation HGSugarViewController
 @synthesize picker;
+@synthesize callerView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,7 +31,7 @@
 	// Do any additional setup after loading the view.
     picker.delegate=self;
     picker.dataSource=self;
-    _bpvalueArray = [NSMutableArray arrayWithCapacity:300];
+     _bpvalueArray = [NSMutableArray arrayWithCapacity:300];
     for ( int i = 1 ; i <= 300 ; i ++ )
         [_bpvalueArray addObject:[[NSNumber numberWithInt:i] stringValue]];
     _bptypeArray = @[@"Fasting",@"2-hour postprandial",@"Random",@"Oral",@"Glycohemoglobin A1c"];
@@ -100,6 +101,13 @@
 {
     //Let's print in the console what the user had chosen;
     //NSLog(@"Chosen item: %@", [itemsArray objectAtIndex:row]);
+}
+
+- (IBAction)doDoneButton:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+    //static NSString *CellIdentifier = @"sugarrecord";
+    //UITableViewCell *cell = [callerView.tableView dequeueReusableCellWithIdentifier:<#(NSString *)#> forIndexPath:<#(NSIndexPath *)#> :CellIdentifier forIndexPath:0];
+    callerView.sugarrecord.text = @"new sugar record added";
 }
 
 @end

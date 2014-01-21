@@ -34,46 +34,63 @@
             </objects>
             <point key="canvasLocation" x="1513" y="514"/>
         </scene>
-        <!--Table View Controller - My PHR-->
+        <!--MyPHR View Controller - My PHR-->
         <scene sceneID="SdA-Do-0ye">
             <objects>
-                <tableViewController id="r56-aj-xxq" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="hgmyphrview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r56-aj-xxq" customClass="HGMyPHRViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="yDI-FC-z0m">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99215692281723022" green="0.97647064924240112" blue="0.98431378602981567" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="separatorColor" red="0.92941182850000004" green="0.52549022440000004" blue="0.25490197539999998" alpha="1" colorSpace="deviceRGB"/>
                         <segmentedControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" segmentControlStyle="bar" id="1DY-E2-Lak">
                             <rect key="frame" x="0.0" y="291" width="320" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Share"/>
                                 <segment title="MyPlus"/>
-                                <segment title="Notifications"/>
                             </segments>
+                            <connections>
+                                <action selector="myplus:" destination="r56-aj-xxq" eventType="valueChanged" id="7PF-4l-dvK"/>
+                            </connections>
                         </segmentedControl>
                         <sections>
                             <tableViewSection footerTitle="Add new record" id="KQL-Da-tpC">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="TQg-K7-uWG" detailTextLabel="Wre-es-com" style="IBUITableViewCellStyleValue1" id="fQC-1R-dUw">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="sugarview" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sugarrecord" id="fQC-1R-dUw">
                                         <rect key="frame" x="0.0" y="10" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="267" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Sugar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQg-K7-uWG">
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sugar" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="46" translatesAutoresizingMaskIntoConstraints="NO" id="57R-2e-Hiu">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="QWp-Hv-agh"/>
+                                                        <constraint firstAttribute="width" constant="46" id="nto-9o-Cr5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="15"/>
+                                                    <color key="textColor" red="0.43921571969985962" green="0.57254904508590698" blue="0.20000001788139343" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Add" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wre-es-com">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z48-hk-hqM">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="196" id="Ibi-6G-gbm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Papyrus-Condensed" family="Papyrus" pointSize="12"/>
+                                                    <color key="textColor" red="0.92941182850000004" green="0.52549022440000004" blue="0.25490197539999998" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="57R-2e-Hiu" firstAttribute="leading" secondItem="fQC-1R-dUw" secondAttribute="leading" constant="19" id="4tY-u3-qGj"/>
+                                            <constraint firstItem="Z48-hk-hqM" firstAttribute="leading" secondItem="57R-2e-Hiu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Cwf-MQ-UeV"/>
+                                            <constraint firstItem="57R-2e-Hiu" firstAttribute="top" secondItem="fQC-1R-dUw" secondAttribute="top" constant="12" id="P3c-qj-G9T"/>
+                                            <constraint firstItem="Z48-hk-hqM" firstAttribute="top" secondItem="57R-2e-Hiu" secondAttribute="top" type="default" id="Sdj-6c-7ir"/>
+                                            <constraint firstItem="Z48-hk-hqM" firstAttribute="bottom" secondItem="57R-2e-Hiu" secondAttribute="bottom" type="default" id="bPU-NR-3dt"/>
+                                        </constraints>
                                         <connections>
                                             <segue destination="acT-Ev-2NW" kind="push" identifier="seguetosugarview" id="aGG-ta-6W3"/>
                                         </connections>
@@ -82,56 +99,79 @@
                             </tableViewSection>
                             <tableViewSection footerTitle="Add new record" id="50A-82-E4M">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="NVe-Xz-BB6" detailTextLabel="fSK-ov-kqn" style="IBUITableViewCellStyleValue1" id="YKb-hF-SdE">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cholrecord" id="YKb-hF-SdE">
                                         <rect key="frame" x="0.0" y="107" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="267" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Cholesterol" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVe-Xz-BB6">
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cholesterol" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhr-7T-Ec7">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="66" id="GlR-gX-deh"/>
+                                                        <constraint firstAttribute="height" constant="42" id="TTv-Du-hpO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="11"/>
+                                                    <color key="textColor" red="0.43921571970000001" green="0.57254904510000004" blue="0.20000001789999999" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Add" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSK-ov-kqn">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf8-wf-KAT">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="181" id="8o7-F9-G6A"/>
+                                                        <constraint firstAttribute="height" constant="29" id="veb-9v-OFv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Papyrus-Condensed" family="Papyrus" pointSize="12"/>
+                                                    <color key="textColor" red="0.92941182850000004" green="0.52549022440000004" blue="0.25490197539999998" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <connections>
-                                            <segue destination="A0J-Gj-HLZ" kind="push" identifier="seguetomyplus" id="2Vh-1i-Wns"/>
-                                        </connections>
+                                        <constraints>
+                                            <constraint firstItem="Bhr-7T-Ec7" firstAttribute="top" secondItem="YKb-hF-SdE" secondAttribute="top" constant="8" id="6f2-P0-BsX"/>
+                                            <constraint firstItem="Bhr-7T-Ec7" firstAttribute="leading" secondItem="YKb-hF-SdE" secondAttribute="leading" constant="17" id="Lke-Hq-xHf"/>
+                                            <constraint firstItem="hf8-wf-KAT" firstAttribute="top" secondItem="Bhr-7T-Ec7" secondAttribute="top" type="default" id="iSd-4J-oAZ"/>
+                                            <constraint firstItem="hf8-wf-KAT" firstAttribute="leading" secondItem="YKb-hF-SdE" secondAttribute="leading" constant="102" id="x5Q-26-9XR"/>
+                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection footerTitle="Add new record" id="YL2-CF-piA">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="nq2-lZ-PMq" detailTextLabel="qvT-4i-JEJ" style="IBUITableViewCellStyleValue1" id="GyO-jh-kqe">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bprecord" id="GyO-jh-kqe">
                                         <rect key="frame" x="0.0" y="204" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="267" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="BP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nq2-lZ-PMq">
-                                                    <rect key="frame" x="10" y="11" width="24" height="21"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="BP" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="46" translatesAutoresizingMaskIntoConstraints="NO" id="diX-hj-xAe">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="46" id="Clw-70-AoC"/>
+                                                        <constraint firstAttribute="height" constant="21" id="YZN-GX-s0d"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="15"/>
+                                                    <color key="textColor" red="0.43921571970000001" green="0.57254904510000004" blue="0.20000001789999999" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Add" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qvT-4i-JEJ">
-                                                    <rect key="frame" x="226" y="11" width="31" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9L-LP-NHR">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="1cw-2R-ngk"/>
+                                                        <constraint firstAttribute="width" constant="196" id="nMW-3k-D0g"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Papyrus-Condensed" family="Papyrus" pointSize="12"/>
+                                                    <color key="textColor" red="0.92941182850000004" green="0.52549022440000004" blue="0.25490197539999998" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="diX-hj-xAe" firstAttribute="leading" secondItem="GyO-jh-kqe" secondAttribute="leading" constant="20" type="default" id="31O-1D-bw2"/>
+                                            <constraint firstItem="g9L-LP-NHR" firstAttribute="leading" secondItem="GyO-jh-kqe" secondAttribute="leading" constant="84" id="484-Yx-rDd"/>
+                                            <constraint firstItem="diX-hj-xAe" firstAttribute="top" secondItem="GyO-jh-kqe" secondAttribute="top" constant="12" id="Ite-wq-wp7"/>
+                                            <constraint firstItem="g9L-LP-NHR" firstAttribute="top" secondItem="GyO-jh-kqe" secondAttribute="top" constant="9" id="aqj-Gi-UYn"/>
+                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -145,10 +185,14 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="izS-Dk-Xop"/>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="8Aq-j2-Ys6"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="sugarrecord" destination="Z48-hk-hqM" id="mGr-7t-L4Z"/>
+                        <segue destination="A0J-Gj-HLZ" kind="push" identifier="seguetomyplus" id="6BP-fU-bIy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKc-Vq-XUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034" y="-172"/>
+            <point key="canvasLocation" x="917" y="-196"/>
         </scene>
         <!--Sugar View Controller-->
         <scene sceneID="UCd-et-IJW">
@@ -191,7 +235,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aSD-z5-gdL">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="B6t-IP-h44"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="8zE-Uy-0GQ">
+                            <connections>
+                                <action selector="doDoneButton:" destination="acT-Ev-2NW" id="y8n-F5-bkn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="picker" destination="RRh-md-T9h" id="K4s-cU-sA3"/>
@@ -199,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIV-01-KxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1572" y="-172"/>
+            <point key="canvasLocation" x="1638" y="-172"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="y8T-0g-MzX">
@@ -313,6 +361,36 @@
             </objects>
             <point key="canvasLocation" x="-649" y="286"/>
         </scene>
+        <!--Table View Controller - Notifications-->
+        <scene sceneID="I2G-tc-jyv">
+            <objects>
+                <tableViewController storyboardIdentifier="hgnotifview" title="Notifications" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WAq-3o-f76" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AsG-PW-ydR">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="0ez-3e-vnz">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WAq-3o-f76" id="7dS-Pt-FeJ"/>
+                            <outlet property="delegate" destination="WAq-3o-f76" id="WRk-xs-C1V"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Notifications" id="K9m-Rw-N7P"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ioW-MN-Ehv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-136" y="-279"/>
+        </scene>
         <!--Tab Bar Controller - MyGini-->
         <scene sceneID="2ZL-kl-LPD">
             <objects>
@@ -327,6 +405,7 @@
                         <segue destination="u11-mZ-cph" kind="relationship" relationship="viewControllers" id="Stg-iM-fs3"/>
                         <segue destination="F2p-sf-KZ8" kind="relationship" relationship="viewControllers" id="UXm-m6-taR"/>
                         <segue destination="5vD-o0-d3d" kind="relationship" relationship="viewControllers" id="tSt-K2-P4S"/>
+                        <segue destination="WAq-3o-f76" kind="relationship" relationship="viewControllers" id="YUP-7P-ype"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7DN-oh-MhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -452,6 +531,14 @@
         </class>
         <class className="HGAppViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HGAppViewController.h"/>
+        </class>
+        <class className="HGMyPHRViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HGMyPHRViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="done:"/>
+                <relationship kind="action" name="myplus:"/>
+                <relationship kind="outlet" name="sugarrecord" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="HGMyplusViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HGMyplusViewController.h"/>

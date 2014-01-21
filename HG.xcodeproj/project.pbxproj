@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A20F5ADF188B934C000FF206 /* HGNotifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20F5ADE188B934C000FF206 /* HGNotifViewController.m */; };
+		A20F5AE2188B950F000FF206 /* HGMyPHRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20F5AE1188B950F000FF206 /* HGMyPHRViewController.m */; };
 		A285728D184F3A8300CA2D31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A285728C184F3A8300CA2D31 /* UIKit.framework */; };
 		A285728F184F3A8300CA2D31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A285728E184F3A8300CA2D31 /* Foundation.framework */; };
 		A2857291184F3A8300CA2D31 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2857290184F3A8300CA2D31 /* CoreGraphics.framework */; };
@@ -30,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A20F5ADD188B934C000FF206 /* HGNotifViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGNotifViewController.h; sourceTree = "<group>"; };
+		A20F5ADE188B934C000FF206 /* HGNotifViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGNotifViewController.m; sourceTree = "<group>"; };
+		A20F5AE0188B950F000FF206 /* HGMyPHRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMyPHRViewController.h; sourceTree = "<group>"; };
+		A20F5AE1188B950F000FF206 /* HGMyPHRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMyPHRViewController.m; sourceTree = "<group>"; };
 		A2857289184F3A8300CA2D31 /* HG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A285728C184F3A8300CA2D31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A285728E184F3A8300CA2D31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -203,6 +209,10 @@
 				A289D506187C023F00EB46A0 /* HGSugarViewController.m */,
 				A289D55F1882792D00EB46A0 /* HGMyplusViewController.h */,
 				A289D5601882792D00EB46A0 /* HGMyplusViewController.m */,
+				A20F5ADD188B934C000FF206 /* HGNotifViewController.h */,
+				A20F5ADE188B934C000FF206 /* HGNotifViewController.m */,
+				A20F5AE0188B950F000FF206 /* HGMyPHRViewController.h */,
+				A20F5AE1188B950F000FF206 /* HGMyPHRViewController.m */,
 			);
 			path = HG;
 			sourceTree = "<group>";
@@ -403,6 +413,8 @@
 				A289D5611882792D00EB46A0 /* HGMyplusViewController.m in Sources */,
 				A289D56718827ED200EB46A0 /* CPDConstants.m in Sources */,
 				A289D56818827ED200EB46A0 /* CPDStockPriceStore.m in Sources */,
+				A20F5ADF188B934C000FF206 /* HGNotifViewController.m in Sources */,
+				A20F5AE2188B950F000FF206 /* HGMyPHRViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HGMyPHRViewController.h"
 
 @interface HGSugarViewController : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate>
 
-
+@property(weak, nonatomic)  HGMyPHRViewController *callerView;
 @property (strong, nonatomic) IBOutlet UIPickerView *picker;
 @property (strong, nonatomic) NSMutableArray  *bpvalueArray;
 @property (strong, nonatomic) NSArray  *bptypeArray;
