@@ -11,8 +11,19 @@
 
 //modified
 
-@interface HGAppDelegate : UIResponder <UIApplicationDelegate>
+@class HGAppViewController;
+@class HGAppLoginViewController;
+@class HGBaseViewController;
+@class SplashViewController;
 
+@interface HGAppDelegate : UIResponder <UIApplicationDelegate,UINavigationControllerDelegate>
+
+@property (strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) HGBaseViewController *mainViewController;
+@property (strong, nonatomic) HGAppLoginViewController* loginViewController;
 @property (strong, nonatomic) UIWindow *window;
+@property BOOL isNavigating;
+
+- (void)openSession;
 
 @end

@@ -23,12 +23,15 @@
 		A28572B018508FBE00CA2D31 /* StethoBleu256.png in Resources */ = {isa = PBXBuildFile; fileRef = A28572AF18508FBE00CA2D31 /* StethoBleu256.png */; };
 		A28573351866C8CC00CA2D31 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28573341866C8CB00CA2D31 /* FacebookSDK.framework */; };
 		A285733E1866D95300CA2D31 /* HGAppLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A285733D1866D95300CA2D31 /* HGAppLoginViewController.m */; };
+		A2890FD11890E9B200F655EE /* HGBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2890FD01890E9B200F655EE /* HGBaseViewController.m */; };
 		A289D507187C023F00EB46A0 /* HGSugarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A289D506187C023F00EB46A0 /* HGSugarViewController.m */; };
 		A289D55C1881D93D00EB46A0 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A289D55B1881D93D00EB46A0 /* libCorePlot-CocoaTouch.a */; };
 		A289D55E1882295000EB46A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289D55D1882295000EB46A0 /* QuartzCore.framework */; };
 		A289D5611882792D00EB46A0 /* HGMyplusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A289D5601882792D00EB46A0 /* HGMyplusViewController.m */; };
 		A289D56718827ED200EB46A0 /* CPDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A289D56418827ED200EB46A0 /* CPDConstants.m */; };
 		A289D56818827ED200EB46A0 /* CPDStockPriceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A289D56618827ED200EB46A0 /* CPDStockPriceStore.m */; };
+		A28B10C318A0D2DA00246A8A /* HGNewAcctViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28B10C218A0D2DA00246A8A /* HGNewAcctViewController.m */; };
+		A28B10C618A1AFC400246A8A /* HGAcctLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28B10C518A1AFC400246A8A /* HGAcctLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,8 @@
 		A28573341866C8CB00CA2D31 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		A285733C1866D95200CA2D31 /* HGAppLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGAppLoginViewController.h; sourceTree = "<group>"; };
 		A285733D1866D95300CA2D31 /* HGAppLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGAppLoginViewController.m; sourceTree = "<group>"; };
+		A2890FCF1890E9B200F655EE /* HGBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGBaseViewController.h; sourceTree = "<group>"; };
+		A2890FD01890E9B200F655EE /* HGBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGBaseViewController.m; sourceTree = "<group>"; };
 		A289D505187C023F00EB46A0 /* HGSugarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGSugarViewController.h; sourceTree = "<group>"; };
 		A289D506187C023F00EB46A0 /* HGSugarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGSugarViewController.m; sourceTree = "<group>"; };
 		A289D50D1881D93D00EB46A0 /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
@@ -144,6 +149,10 @@
 		A289D56418827ED200EB46A0 /* CPDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDConstants.m; sourceTree = "<group>"; };
 		A289D56518827ED200EB46A0 /* CPDStockPriceStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDStockPriceStore.h; sourceTree = "<group>"; };
 		A289D56618827ED200EB46A0 /* CPDStockPriceStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDStockPriceStore.m; sourceTree = "<group>"; };
+		A28B10C118A0D2DA00246A8A /* HGNewAcctViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGNewAcctViewController.h; sourceTree = "<group>"; };
+		A28B10C218A0D2DA00246A8A /* HGNewAcctViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGNewAcctViewController.m; sourceTree = "<group>"; };
+		A28B10C418A1AFC400246A8A /* HGAcctLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGAcctLoginViewController.h; sourceTree = "<group>"; };
+		A28B10C518A1AFC400246A8A /* HGAcctLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGAcctLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +222,12 @@
 				A20F5ADE188B934C000FF206 /* HGNotifViewController.m */,
 				A20F5AE0188B950F000FF206 /* HGMyPHRViewController.h */,
 				A20F5AE1188B950F000FF206 /* HGMyPHRViewController.m */,
+				A2890FCF1890E9B200F655EE /* HGBaseViewController.h */,
+				A2890FD01890E9B200F655EE /* HGBaseViewController.m */,
+				A28B10C118A0D2DA00246A8A /* HGNewAcctViewController.h */,
+				A28B10C218A0D2DA00246A8A /* HGNewAcctViewController.m */,
+				A28B10C418A1AFC400246A8A /* HGAcctLoginViewController.h */,
+				A28B10C518A1AFC400246A8A /* HGAcctLoginViewController.m */,
 			);
 			path = HG;
 			sourceTree = "<group>";
@@ -415,6 +430,9 @@
 				A289D56818827ED200EB46A0 /* CPDStockPriceStore.m in Sources */,
 				A20F5ADF188B934C000FF206 /* HGNotifViewController.m in Sources */,
 				A20F5AE2188B950F000FF206 /* HGMyPHRViewController.m in Sources */,
+				A2890FD11890E9B200F655EE /* HGBaseViewController.m in Sources */,
+				A28B10C318A0D2DA00246A8A /* HGNewAcctViewController.m in Sources */,
+				A28B10C618A1AFC400246A8A /* HGAcctLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

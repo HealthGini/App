@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface HGAppLoginViewController : UIViewController
+@interface HGAppLoginViewController : UIViewController<FBLoginViewDelegate,FBUserSettingsDelegate, UIAlertViewDelegate,UITextFieldDelegate>
+
 - (IBAction)fbLogIn:(id)sender;
+- (IBAction)genLogIn:(id)sender;
+- (IBAction)learnMore:(id)sender;
+
 
 @end

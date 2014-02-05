@@ -36,13 +36,31 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)performLogIn:(id)sender {
+- (IBAction)fbLogIn:(id)sender {
     //[self.spinner startAnimating];
     
     HGAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
-    //[appDelegate openSession];
+    [appDelegate openSession];
     NSLog(@"Success Login here.");
    // [self registerUser]; //Added Souvik
+}
+
+//nosocial label
+-(void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    if(touch.view.tag == 1000){
+        [self performSegueWithIdentifier:@"seguetonewacct" sender:self];
+    }
+}
+
+- (IBAction)genLogIn:(id)sender {
+    
+}
+
+- (IBAction)learnMore:(id)sender {
+    
 }
 
 @end
