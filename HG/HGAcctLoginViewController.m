@@ -14,6 +14,9 @@
 
 @implementation HGAcctLoginViewController
 
+@synthesize delegate;
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -42,7 +45,7 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
@@ -66,7 +69,7 @@
     return cell;
 }
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -116,6 +119,16 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (IBAction)cancel:(id)sender
+{
+    [self.delegate AcctLoginControllerDidCancel:self];
+}
+
+- (IBAction)login:(id)sender
+{
+    
 }
 
 @end

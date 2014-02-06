@@ -7,12 +7,18 @@
 //
 
 #import "HGNewAcctViewController.h"
+#import "API.h"
 
 @interface HGNewAcctViewController ()
 
 @end
 
 @implementation HGNewAcctViewController
+
+@synthesize delegate;
+@synthesize email;
+@synthesize name;
+@synthesize passwd;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.email becomeFirstResponder];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -111,6 +119,56 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+// Displays the user's name and profile picture so they are aware of the Facebook
+// identity they are logged in as.
+// FB id and autoincrement UID
+- (void)registerUser {
+    if (FBSession.activeSession.isOpen) {
+        NSLog(@"Active FB session.");
+        [[FBRequest requestForMe] startWithCompletionHandler:
+         ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
+             if (!error) {
+                 //self.userNameLabel.text = user.name;
+                 //self.userProfileImage.profileID = [user objectForKey:@"id"];
+                 NSString* command = @"loginFB";
+                 NSString* fid = [user objectForKey:@"id"];
+                 NSString* funame = [user objectForKey:user.name];
+                 NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys: command, @"command", fid, @"fid", funame, @"funame", nil];
+                 [[API sharedInstance] commandWithParams:params onCompletion:^(NSDictionary *json) {
+                     //result returned
+                     NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
+                     if ([json objectForKey:@"error"]==nil && [res objectForKey:@"fid"]) {
+                         NSLog(@"Success Login.");
+                     } else {
+                         //error
+                         NSLog(@"Error Login.");
+                     }
+                 }];
+             }
+         }];
+    }
+}
+
+- (IBAction)cancel:(id)sender
+{
+    [self.delegate NewAcctViewControllerDidCancel:self];
+}
+
+- (IBAction)create:(id)sender
+{
+    
+    //form fields validation
+    if (self.passwd.text.length < 4) {
+        //[UIAlertView error:@"Error: Enter password containing atleast 4 chars."];
+        [[[UIAlertView alloc] initWithTitle:@"Error"
+                                    message:@"Enter password containing atleast 4 chars"
+                                   delegate:nil
+                          cancelButtonTitle:@"Close"
+                          otherButtonTitles: nil] show];
+        return;
+    }
 }
 
 

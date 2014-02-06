@@ -10,6 +10,7 @@
 #import "HGBaseViewController.h"
 #import "HGAppLoginViewController.h"
 #import <FacebookSDK/FBSessionTokenCachingStrategy.h>
+#import "API.h"
 
 @implementation HGAppDelegate
 
@@ -154,16 +155,41 @@ isNavigating = _isNavigating;
     switch (state) {
         case FBSessionStateOpen: {
             NSLog(@"FBSessionStateOpen.");
-            /*UIViewController *topViewController =
-             [self.navigationController topViewController];
-             if ([[topViewController modalViewController]
-             isKindOfClass:[LoginViewController class]]) {
-             [topViewController dismissModalViewControllerAnimated:YES];
-             }*/
-            /*[self.window setRootViewController:self.mainViewController];
-             [self.mainViewController setSelectedIndex:0];
-             [self.window makeKeyAndVisible];
-             */
+            
+            NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+            if ([settings objectForKey:@"username"]==nil) {
+                
+            //Register the user
+            [[FBRequest requestForMe] startWithCompletionHandler:
+             ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
+                 if (!error) {
+                     NSString* fid = [user objectForKey:@"id"];
+                     NSString* funame = [user objectForKey:@"username"];
+                     NSLog(@"FBSessionStateOpen: username = %@",funame);
+                     NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+                     [settings setObject:funame forKey:@"username"];
+                     [settings setObject:fid forKey:@"userid"];
+                     [settings synchronize];
+                     //[self registerTheDevice];
+                     
+                     //store in backend DB
+                     NSString* command = @"loginFB";
+                     NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys: command, @"command", fid, @"fid", funame, @"funame", nil];
+                     [[API sharedInstance] commandWithParams:params onCompletion:^(NSDictionary *json) {
+                         //result returned
+                         NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
+                         if ([json objectForKey:@"error"]==nil && [res objectForKey:@"fid"]) {
+                             NSLog(@"Success Login.");
+                         } else {
+                             //error
+                             NSLog(@"Error Login.");
+                         }
+                     }];
+                     
+                 }
+             }];
+            }
+            
             UIViewController *topViewController =
             [self.navigationController topViewController];
             if ([[topViewController modalViewController]

@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class HGAcctLoginViewController;
+
+@protocol AcctLoginControllerDelegate <NSObject>
+- (void)AcctLoginControllerDidCancel:
+(HGAcctLoginViewController *)controller;
+@end
+
 @interface HGAcctLoginViewController : UITableViewController
+@property (nonatomic, weak) id <AcctLoginControllerDelegate> delegate;
+
+- (IBAction)cancel:(id)sender;
+- (IBAction)login:(id)sender;
 
 @end
