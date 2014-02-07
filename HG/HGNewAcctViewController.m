@@ -124,31 +124,29 @@
 // Displays the user's name and profile picture so they are aware of the Facebook
 // identity they are logged in as.
 // FB id and autoincrement UID
-- (void)registerUser {
-    if (FBSession.activeSession.isOpen) {
-        NSLog(@"Active FB session.");
-        [[FBRequest requestForMe] startWithCompletionHandler:
-         ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
-             if (!error) {
-                 //self.userNameLabel.text = user.name;
-                 //self.userProfileImage.profileID = [user objectForKey:@"id"];
-                 NSString* command = @"loginFB";
-                 NSString* fid = [user objectForKey:@"id"];
-                 NSString* funame = [user objectForKey:user.name];
-                 NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys: command, @"command", fid, @"fid", funame, @"funame", nil];
-                 [[API sharedInstance] commandWithParams:params onCompletion:^(NSDictionary *json) {
-                     //result returned
-                     NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
-                     if ([json objectForKey:@"error"]==nil && [res objectForKey:@"fid"]) {
-                         NSLog(@"Success Login.");
-                     } else {
-                         //error
-                         NSLog(@"Error Login.");
-                     }
+- (void)registerUser:(NSString*)uname setpasswd:(NSString*)upasswd setlogintype:(NSString*)ltype{
+    
+         NSString* command = @"register";
+         NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys: command, @"command", uname, @"uname", upasswd, @"upasswd",ltype, @"ltype", nil];
+         [[API sharedInstance] commandWithParams:params onCompletion:^(NSDictionary *json) {
+             //result returned
+             NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
+             //Handle registration and login response
+             if ([json objectForKey:@"error"]==nil && [res objectForKey:@"uid"]) {
+                 NSLog(@"Success Login.");
+                 //[self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+                 UIViewController *parentview = self.presentingViewController;
+                 [self dismissViewControllerAnimated:NO completion:^{
+                     [parentview dismissViewControllerAnimated:NO completion:nil];
                  }];
+                 [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"isLoggedIn"];
+                 [[NSUserDefaults standardUserDefaults] synchronize];
+                 
+             } else {
+                 //error
+                 NSLog(@"Error Login.");
              }
          }];
-    }
 }
 
 - (IBAction)cancel:(id)sender
@@ -169,6 +167,10 @@
                           otherButtonTitles: nil] show];
         return;
     }
+    //register the user
+    NSString* uname = self.email.text;
+    NSString* upasswd = self.passwd.text;
+    [self registerUser:uname setpasswd:upasswd setlogintype:@"nonsocial"];
 }
 
 

@@ -20,5 +20,7 @@
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)login:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *email;
+@property (strong, nonatomic) IBOutlet UITextField *passwd;
 
 @end

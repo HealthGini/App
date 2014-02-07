@@ -90,7 +90,12 @@ isNavigating = _isNavigating;
         NSLog(@"Active FB Session.");
         [self showLoggedinView];
         //[self openSession];
-    } else {
+    } else if ([[NSUserDefaults standardUserDefaults] valueForKey:@"isLoggedIn"] )
+    {
+        [self showLoggedinView];
+    }
+    else
+    {
         // No, display the login page.
         NSLog(@"NonActive FB Session.");
         [self showLoginView];
@@ -157,7 +162,7 @@ isNavigating = _isNavigating;
             NSLog(@"FBSessionStateOpen.");
             
             NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
-            if ([settings objectForKey:@"username"]==nil) {
+            if ([settings objectForKey:@"uname"]==nil) {
                 
             //Register the user
             [[FBRequest requestForMe] startWithCompletionHandler:
@@ -167,27 +172,15 @@ isNavigating = _isNavigating;
                      NSString* funame = [user objectForKey:@"username"];
                      NSLog(@"FBSessionStateOpen: username = %@",funame);
                      NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
-                     [settings setObject:funame forKey:@"username"];
-                     [settings setObject:fid forKey:@"userid"];
+                     [settings setObject:funame forKey:@"uname"];
+                     //[settings setObject:fid forKey:@"userid"];
                      [settings synchronize];
                      //[self registerTheDevice];
                      
-                     //store in backend DB
-                     NSString* command = @"loginFB";
-                     NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys: command, @"command", fid, @"fid", funame, @"funame", nil];
-                     [[API sharedInstance] commandWithParams:params onCompletion:^(NSDictionary *json) {
-                         //result returned
-                         NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
-                         if ([json objectForKey:@"error"]==nil && [res objectForKey:@"fid"]) {
-                             NSLog(@"Success Login.");
-                         } else {
-                             //error
-                             NSLog(@"Error Login.");
-                         }
-                     }];
-                     
+                     [self registerUser:funame setpasswd:@"social_passwd" setlogintype:@"facebook"];
                  }
              }];
+                
             }
             
             UIViewController *topViewController =
@@ -241,6 +234,22 @@ isNavigating = _isNavigating;
        FBSessionState state, NSError *error) {
          [self sessionStateChanged:session state:state error:error];
      }];
+}
+
+- (void)registerUser:(NSString*)uname setpasswd:(NSString*)upasswd setlogintype:(NSString*)ltype{
+    
+    NSString* command = @"register";
+    NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys: command, @"command", uname, @"uname", upasswd, @"upasswd", ltype, @"ltype", nil];
+    [[API sharedInstance] commandWithParams:params onCompletion:^(NSDictionary *json) {
+        //result returned
+        NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
+        if ([json objectForKey:@"error"]==nil && [res objectForKey:@"fid"]) {
+            NSLog(@"Success Login.");
+        } else {
+            //error
+            NSLog(@"Error Login.");
+        }
+    }];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "HGAcctLoginViewController.h"
+#import "API.h"
 
 @interface HGAcctLoginViewController ()
 
@@ -15,6 +16,8 @@
 @implementation HGAcctLoginViewController
 
 @synthesize delegate;
+@synthesize email;
+@synthesize passwd;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -121,6 +124,36 @@
      */
 }
 
+- (void)loginUser:(NSString*)uname setpasswd:(NSString*)upasswd {
+    
+    NSString* command = @"login";
+    NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys: command, @"command", uname, @"uname", upasswd, @"upasswd",nil];
+    [[API sharedInstance] commandWithParams:params onCompletion:^(NSDictionary *json) {
+        //result returned
+        NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
+        //Handle registration and login response
+        if ([json objectForKey:@"error"]==nil && [res objectForKey:@"uid"]) {
+            NSLog(@"Success Login.");
+            //[self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+            UIViewController *parentview = self.presentingViewController;
+            [self dismissViewControllerAnimated:NO completion:^{
+                [parentview dismissViewControllerAnimated:NO completion:nil];
+            }];
+            [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"isLoggedIn"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+        } else {
+            //error
+            NSLog(@"Error Login.");
+            [[[UIAlertView alloc] initWithTitle:@"Error"
+                                        message:@"Username/password incorrect! Try again!"
+                                       delegate:nil
+                              cancelButtonTitle:@"Close"
+                              otherButtonTitles: nil] show];
+        }
+    }];
+}
+
 - (IBAction)cancel:(id)sender
 {
     [self.delegate AcctLoginControllerDidCancel:self];
@@ -128,7 +161,9 @@
 
 - (IBAction)login:(id)sender
 {
-    
+    NSString* uname = self.email.text;
+    NSString* upasswd = self.passwd.text;
+    [self loginUser:uname setpasswd:upasswd];
 }
 
 @end
