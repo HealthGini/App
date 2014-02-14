@@ -140,6 +140,9 @@
                      [parentview dismissViewControllerAnimated:NO completion:nil];
                  }];
                  [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"isLoggedIn"];
+                 //Also store the uid of current user
+                 NSInteger uid = [(NSNumber*)[res objectForKey:@"uid"] intValue];
+                 [[NSUserDefaults standardUserDefaults] setInteger:uid forKey:@"uid"];
                  [[NSUserDefaults standardUserDefaults] synchronize];
                  
              } else {

@@ -7,6 +7,7 @@
 //
 
 #import "HGSugarViewController.h"
+#import "API.h"
 
 @interface HGSugarViewController ()
 
@@ -15,6 +16,7 @@
 @implementation HGSugarViewController
 @synthesize picker;
 @synthesize callerView;
+@synthesize bpValue;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -95,19 +97,55 @@
     }
 }
 
+- (void)logRecord:(NSString*)uid setvalue:(NSString*)uval {
+
+    NSString* command = @"postPHR";
+    NSMutableDictionary* params =[NSMutableDictionary dictionaryWithObjectsAndKeys: command, @"command", uid, @"uid", uval, @"value",nil];
+    [[API sharedInstance] commandWithParams:params onCompletion:^(NSDictionary *json) {
+    //result returned
+    NSDictionary* res = [[json objectForKey:@"result"] objectAtIndex:0];
+    //Handle registration and login response
+    if ([json objectForKey:@"error"]==nil && [res objectForKey:@"trans_uid"]) {
+        NSLog(@"Success Storing new sugar record.");
+        //[[NSUserDefaults standardUserDefaults] setBool:true forKey:@"isLoggedIn"];
+        //[[NSUserDefaults standardUserDefaults] synchronize];
+        
+    } else {
+        //error
+        NSLog(@"Error Storing new sugar record.");
+        [[[UIAlertView alloc] initWithTitle:@"Error"
+                                    message:@"New entry could not be stored"
+                                   delegate:nil
+                          cancelButtonTitle:@"Close"
+                          otherButtonTitles: nil] show];
+    }
+}];
+}
+
+- (void)dismantleView {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 //If the user chooses from the pickerview, it calls this function;
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     //Let's print in the console what the user had chosen;
     //NSLog(@"Chosen item: %@", [itemsArray objectAtIndex:row]);
+    self.bpValue=[(NSNumber *)[_bpvalueArray objectAtIndex:row] intValue];
+    NSLog(@"Chosen item: %i", self.bpValue);
 }
 
 - (IBAction)doDoneButton:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    
     //static NSString *CellIdentifier = @"sugarrecord";
     //UITableViewCell *cell = [callerView.tableView dequeueReusableCellWithIdentifier:<#(NSString *)#> forIndexPath:<#(NSIndexPath *)#> :CellIdentifier forIndexPath:0];
     callerView.sugarrecord.text = @"new sugar record added";
+    //Store in db
+    NSString* uid = [[NSUserDefaults standardUserDefaults] objectForKey:@"uid"];
+    [self logRecord:uid setvalue:[NSString stringWithFormat:@"%d",self.bpValue]];
+    [self dismantleView];
+    
 }
 
 @end

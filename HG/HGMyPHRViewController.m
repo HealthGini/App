@@ -8,6 +8,7 @@
 
 #import "HGMyPHRViewController.h"
 #import "HGSugarViewController.h"
+#import "HGCholViewController.h"
 
 @interface HGMyPHRViewController ()
 
@@ -156,6 +157,12 @@
          //objectAtIndex:0];
 		//newQuesViewController.delegate = self;
 	}
+    else if ([segue.identifier isEqualToString:@"seguetocholview"])
+	{
+		HGCholViewController *navigationController = segue.destinationViewController;
+        navigationController.callerView = self;
+	}
+
 }
 
 @end

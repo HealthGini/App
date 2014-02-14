@@ -133,6 +133,9 @@
                                             <constraint firstItem="hf8-wf-KAT" firstAttribute="top" secondItem="Bhr-7T-Ec7" secondAttribute="top" type="default" id="iSd-4J-oAZ"/>
                                             <constraint firstItem="hf8-wf-KAT" firstAttribute="leading" secondItem="YKb-hF-SdE" secondAttribute="leading" constant="102" id="x5Q-26-9XR"/>
                                         </constraints>
+                                        <connections>
+                                            <segue destination="t6L-ef-P4D" kind="push" identifier="seguetocholview" id="xd2-po-lNw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -186,6 +189,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" id="8Aq-j2-Ys6"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="cholrecord" destination="hf8-wf-KAT" id="fTn-k1-GGp"/>
                         <outlet property="sugarrecord" destination="Z48-hk-hqM" id="mGr-7t-L4Z"/>
                         <segue destination="A0J-Gj-HLZ" kind="push" identifier="seguetomyplus" id="6BP-fU-bIy"/>
                     </connections>
@@ -193,6 +197,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKc-Vq-XUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="917" y="-196"/>
+        </scene>
+        <!--Chol View Controller-->
+        <scene sceneID="Ttp-F1-ppB">
+            <objects>
+                <viewController storyboardIdentifier="hgbpview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="t6L-ef-P4D" customClass="HGCholViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wb5-eb-EVY">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B23-5J-VMn">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="vTI-oo-Mqd"/>
+                                    <constraint firstAttribute="width" constant="274" id="vjW-eT-WxC"/>
+                                </constraints>
+                            </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PeH-mA-4D0">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="B6K-FV-fcx"/>
+                                    <constraint firstAttribute="width" constant="240" id="Vrc-rh-Jvb"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PeH-mA-4D0" firstAttribute="top" secondItem="Wb5-eb-EVY" secondAttribute="top" constant="54" id="FdS-ZS-buI"/>
+                            <constraint firstItem="PeH-mA-4D0" firstAttribute="centerX" secondItem="B23-5J-VMn" secondAttribute="centerX" type="default" id="W9x-tf-uRQ"/>
+                            <constraint firstItem="PeH-mA-4D0" firstAttribute="centerX" secondItem="Wb5-eb-EVY" secondAttribute="centerX" type="default" id="YHy-Pb-pBa"/>
+                            <constraint firstItem="B23-5J-VMn" firstAttribute="top" secondItem="Wb5-eb-EVY" secondAttribute="top" constant="205" id="b14-XX-qTg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wUS-km-AEy">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="f4f-ef-R9m">
+                            <connections>
+                                <action selector="doDoneButton:" destination="t6L-ef-P4D" id="TwI-zR-2Ts"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="picker" destination="B23-5J-VMn" id="GO2-1b-wPF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7pn-Nb-atG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1342" y="-360"/>
         </scene>
         <!--Sugar View Controller-->
         <scene sceneID="UCd-et-IJW">
@@ -249,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIV-01-KxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638" y="-172"/>
+            <point key="canvasLocation" x="1694" y="-188"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="y8T-0g-MzX">

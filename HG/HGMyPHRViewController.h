@@ -13,5 +13,7 @@
 - (IBAction)myplus:(id)sender;
 - (IBAction)done:(id)sender;
 @property (nonatomic, strong) IBOutlet UILabel *sugarrecord;
+@property (nonatomic, strong) IBOutlet UILabel *cholrecord;
+@property (nonatomic, strong) IBOutlet UILabel *bprecord;
 
 @end

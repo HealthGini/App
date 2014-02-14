@@ -15,5 +15,6 @@
 @property (strong, nonatomic) IBOutlet UIPickerView *picker;
 @property (strong, nonatomic) NSMutableArray  *bpvalueArray;
 @property (strong, nonatomic) NSArray  *bptypeArray;
+@property (nonatomic,assign) NSInteger bpValue;
 
 @end

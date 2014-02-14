@@ -11,5 +11,6 @@
 @interface HGMyplusViewController : UIViewController<CPTPlotDataSource>
 
 @property (nonatomic, strong) CPTGraphHostingView *hostView;
+@property (nonatomic, strong) NSMutableArray *records;
 
 @end

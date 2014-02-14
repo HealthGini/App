@@ -24,6 +24,10 @@
 		A28573351866C8CC00CA2D31 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28573341866C8CB00CA2D31 /* FacebookSDK.framework */; };
 		A285733E1866D95300CA2D31 /* HGAppLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A285733D1866D95300CA2D31 /* HGAppLoginViewController.m */; };
 		A2890FD11890E9B200F655EE /* HGBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2890FD01890E9B200F655EE /* HGBaseViewController.m */; };
+		A2898FB918A749C300A9E71E /* JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2898FB818A749C300A9E71E /* JSONHelper.m */; };
+		A2898FBF18A88F9300A9E71E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A2898FBC18A88F9300A9E71E /* SVProgressHUD.bundle */; };
+		A2898FC018A88F9300A9E71E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A2898FBE18A88F9300A9E71E /* SVProgressHUD.m */; };
+		A2898FC318ADE60800A9E71E /* HGCholViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2898FC218ADE60800A9E71E /* HGCholViewController.m */; };
 		A289D507187C023F00EB46A0 /* HGSugarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A289D506187C023F00EB46A0 /* HGSugarViewController.m */; };
 		A289D55C1881D93D00EB46A0 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A289D55B1881D93D00EB46A0 /* libCorePlot-CocoaTouch.a */; };
 		A289D55E1882295000EB46A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289D55D1882295000EB46A0 /* QuartzCore.framework */; };
@@ -45,6 +49,7 @@
 		A28B116918A3756D00246A8A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28B116818A3756D00246A8A /* Security.framework */; };
 		A28B116B18A3758900246A8A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28B116A18A3758900246A8A /* MobileCoreServices.framework */; };
 		A28B116D18A3759200246A8A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28B116C18A3759200246A8A /* SystemConfiguration.framework */; };
+		A28B117318A71DC400246A8A /* PHRRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = A28B117218A71DC400246A8A /* PHRRecord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +79,14 @@
 		A285733D1866D95300CA2D31 /* HGAppLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGAppLoginViewController.m; sourceTree = "<group>"; };
 		A2890FCF1890E9B200F655EE /* HGBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGBaseViewController.h; sourceTree = "<group>"; };
 		A2890FD01890E9B200F655EE /* HGBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGBaseViewController.m; sourceTree = "<group>"; };
+		A2898FB718A749C300A9E71E /* JSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHelper.h; sourceTree = "<group>"; };
+		A2898FB818A749C300A9E71E /* JSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHelper.m; sourceTree = "<group>"; };
+		A2898FBB18A88F9300A9E71E /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		A2898FBC18A88F9300A9E71E /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		A2898FBD18A88F9300A9E71E /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		A2898FBE18A88F9300A9E71E /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		A2898FC118ADE60700A9E71E /* HGCholViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGCholViewController.h; sourceTree = "<group>"; };
+		A2898FC218ADE60800A9E71E /* HGCholViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGCholViewController.m; sourceTree = "<group>"; };
 		A289D505187C023F00EB46A0 /* HGSugarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGSugarViewController.h; sourceTree = "<group>"; };
 		A289D506187C023F00EB46A0 /* HGSugarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGSugarViewController.m; sourceTree = "<group>"; };
 		A289D50D1881D93D00EB46A0 /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
@@ -190,6 +203,8 @@
 		A28B116818A3756D00246A8A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A28B116A18A3758900246A8A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A28B116C18A3759200246A8A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A28B117118A71DC300246A8A /* PHRRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHRRecord.h; sourceTree = "<group>"; };
+		A28B117218A71DC400246A8A /* PHRRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHRRecord.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +262,7 @@
 		A2857292184F3A8300CA2D31 /* HG */ = {
 			isa = PBXGroup;
 			children = (
+				A2898FBA18A88F9300A9E71E /* SVProgressHUD */,
 				A28B114B18A308D400246A8A /* AFNetworking */,
 				A28B10CA18A307D600246A8A /* API.h */,
 				A28B10CB18A307D600246A8A /* API.m */,
@@ -274,6 +290,12 @@
 				A28B10C218A0D2DA00246A8A /* HGNewAcctViewController.m */,
 				A28B10C418A1AFC400246A8A /* HGAcctLoginViewController.h */,
 				A28B10C518A1AFC400246A8A /* HGAcctLoginViewController.m */,
+				A28B117118A71DC300246A8A /* PHRRecord.h */,
+				A28B117218A71DC400246A8A /* PHRRecord.m */,
+				A2898FB718A749C300A9E71E /* JSONHelper.h */,
+				A2898FB818A749C300A9E71E /* JSONHelper.m */,
+				A2898FC118ADE60700A9E71E /* HGCholViewController.h */,
+				A2898FC218ADE60800A9E71E /* HGCholViewController.m */,
 			);
 			path = HG;
 			sourceTree = "<group>";
@@ -291,6 +313,17 @@
 				A28572A2184F3A8300CA2D31 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2898FBA18A88F9300A9E71E /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A2898FBB18A88F9300A9E71E /* SVProgressHUD-Prefix.pch */,
+				A2898FBC18A88F9300A9E71E /* SVProgressHUD.bundle */,
+				A2898FBD18A88F9300A9E71E /* SVProgressHUD.h */,
+				A2898FBE18A88F9300A9E71E /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		A289D50B1881D52800EB46A0 /* CorePlot */ = {
@@ -482,6 +515,7 @@
 				A28572A3184F3A8300CA2D31 /* Default-568h@2x.png in Resources */,
 				A28572A6184F3A8300CA2D31 /* MainStoryboard.storyboard in Resources */,
 				A28572B018508FBE00CA2D31 /* StethoBleu256.png in Resources */,
+				A2898FBF18A88F9300A9E71E /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +549,10 @@
 				A28B116518A308D500246A8A /* AFURLConnectionOperation.m in Sources */,
 				A28B116618A308D500246A8A /* AFXMLRequestOperation.m in Sources */,
 				A28B116718A308D500246A8A /* UIImageView+AFNetworking.m in Sources */,
+				A28B117318A71DC400246A8A /* PHRRecord.m in Sources */,
+				A2898FB918A749C300A9E71E /* JSONHelper.m in Sources */,
+				A2898FC018A88F9300A9E71E /* SVProgressHUD.m in Sources */,
+				A2898FC318ADE60800A9E71E /* HGCholViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
